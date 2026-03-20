@@ -303,7 +303,9 @@ const About = () => {
         </p>
         <div className="space-y-8 mb-10">
           <div className="flex items-start gap-4">
-            <div className="w-6 h-6 bg-brand-purple brutal-border rounded-md mt-1 flex-shrink-0"></div>
+            <div className="w-8 h-8 flex-shrink-0">
+              <img src="/ucsd.png" alt="UCSD Logo" className="w-full h-full object-contain" />
+            </div>
             <div>
               <h4 className="font-black text-xl">University of California, San Diego</h4>
               <p className="text-gray-500 font-medium">[Provost Honors Student]</p>
