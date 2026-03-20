@@ -320,7 +320,7 @@ const About = () => {
                <img src="/tc.png" alt="Teachers College Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h4 className="font-black text-xl">Teacher College, Columbia University</h4>
+              <h4 className="font-black text-xl">Teachers College, Columbia University</h4>
               <p className="text-gray-600 mt-2">
                 <span className="font-bold"> Degree: </span> Master of Art in Arts Administration
               </p>
