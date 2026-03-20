@@ -466,3 +466,5 @@ export default function App() {
       <Experience />
       <Footer />
     </div>
+  );
+};
