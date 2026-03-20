@@ -303,7 +303,7 @@ const About = () => {
         </p>
         <div className="space-y-8 mb-10">
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 flex-shrink-0">
+            <div className="w-12 h-12 flex-shrink-0">
               <img src="/ucsd.png" alt="UCSD Logo" className="w-full h-full object-contain" />
             </div>
             <div>
@@ -316,11 +316,13 @@ const About = () => {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="w-6 h-6 bg-brand-pink brutal-border rounded-md mt-1 flex-shrink-0"></div>
+            <div className="w-12 h-12 flex-shrink-0">
+               <img src="/tc.png" alt="Teachers College Logo" className="w-full h-full object-contain" />
+            </div>
             <div>
-              <h4 className="font-black text-xl">Columbia University</h4>
+              <h4 className="font-black text-xl">Teacher College, Columbia University</h4>
               <p className="text-gray-600 mt-2">
-                <span className="font-bold">Master of Art:</span><br/>Arts Administration
+                <span className="font-bold"> Degree: </span> Master of Art in Arts Administration
               </p>
             </div>
           </div>
