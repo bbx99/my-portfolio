@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-pink: #FF6B81;
+  --color-brand-blue: #3B82F6;
+  --color-brand-yellow: #FFD166;
+  --color-brand-purple: #7C3AED;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FDFCF8] text-black font-sans antialiased relative;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #000 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    border: 2px solid black;
+  }
+  
+  .brutal-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  }
+
+  .brutal-shadow-lg {
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+  }
+
+  .brutal-card {
+    border: 2px solid black;
+    border-radius: 24px;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .brutal-btn-black {
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .brutal-btn-black:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .brutal-btn-white {
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .brutal-btn-white:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .nav-pill {
+    border: 2px solid black;
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
