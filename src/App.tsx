@@ -106,7 +106,7 @@ const Navbar = () => {
             <a 
               key={item.name} 
               href={item.href} 
-              className="font-bold text-sm hover:text-brand-pink transition-colors"
+              className="font-bold text-base hover:text-brand-pink transition-colors"
             >
               {item.name}
             </a>
