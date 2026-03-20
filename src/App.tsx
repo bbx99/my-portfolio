@@ -106,7 +106,7 @@ const Navbar = () => {
             <a 
               key={item.name} 
               href={item.href} 
-              className="font-bold text-base hover:text-brand-pink transition-colors"
+              className="font-bold text-xl hover:text-brand-pink transition-colors"
             >
               {item.name}
             </a>
@@ -129,7 +129,7 @@ const Hero = () => {
         transition={{ delay: 0.2 }}
         className="text-center md:text-left flex flex-col justify-center"
       >
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-8">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-8">
           I'm <span className="bg-brand-pink text-white px-4 inline-block brutal-border">Qinyan(Kaylee) Zhao</span>, <br />
           an Arts, Marketing & Events Professional base in <span className="bg-brand-blue text-white px-4 inline-block brutal-border">New York</span>
         </h1>
