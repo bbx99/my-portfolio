@@ -337,6 +337,7 @@ const Experience = () => {
   const jobs = [
     { date: 'Mar 2020 - Dec 2023', title: 'Head of Product Design', color: 'bg-brand-yellow' },
     { date: 'Sep 2017 - Feb 2020', title: 'Web Designer', color: 'bg-brand-pink' }
+  { date: 'Sep 2011 - Feb 2020', title: 'TV Production', color: 'bg-brand-green' }
   ];
 
   return (
