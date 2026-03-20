@@ -149,16 +149,14 @@ const Hero = () => {
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="relative"
+        className="relative flex items-center justify-center"
       >
-        <div className="brutal-card bg-brand-yellow aspect-square flex items-end justify-center pt-12">
-          <img 
-            src="https://picsum.photos/seed/avatar/600/600" 
-            alt="Avatar" 
-            className="w-4/5 object-contain"
-            referrerPolicy="no-referrer"
-          />
-        </div>
+        <img 
+          src="/avatar.png" 
+          alt="Avatar" 
+          className="w-full max-w-sm object-contain rounded-full"
+          referrerPolicy="no-referrer"
+        />
       </motion.div>
     </section>
   );
