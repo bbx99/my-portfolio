@@ -459,9 +459,9 @@ export default function App() {
       <FloatingShapes />
       <Navbar />
       <Hero />
+      <About />
       <Services />
       <Portfolio />
-      <About />
       <Experience />
       <Footer />
     </div>
