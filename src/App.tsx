@@ -152,9 +152,9 @@ const Hero = () => {
         className="relative flex items-center justify-center"
       >
         <img 
-          src="/avatar.png" 
-          alt="Avatar" 
-          className="w-full max-w-sm object-contain rounded-full"
+          src="/my.png" 
+          alt="Qinyan Zhao" 
+          className="w-full max-w-md aspect-[4/5] object-cover rounded-3xl brutal-border brutal-shadow-lg"
           referrerPolicy="no-referrer"
         />
       </motion.div>
