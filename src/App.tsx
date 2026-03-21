@@ -140,9 +140,6 @@ const Hero = () => {
           <button className="brutal-btn-black flex items-center gap-2 w-full sm:w-auto">
             <Mail size={20} /> Get in touch
           </button>
-          <button className="brutal-btn-white flex items-center gap-2 w-full sm:w-auto">
-            <Briefcase size={20} /> View portfolio
-          </button>
         </div>
       </motion.div>
       <motion.div 
@@ -158,6 +155,60 @@ const Hero = () => {
           referrerPolicy="no-referrer"
         />
       </motion.div>
+    </section>
+  );
+};
+
+const About = () => {
+  return (
+    <section id="about" className="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative">
+        <div className="w-full aspect-square rounded-full border-4 border-black bg-brand-pink overflow-hidden brutal-shadow-lg">
+           <img 
+            src="https://picsum.photos/seed/about/800/800" 
+            alt="About" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+      </div>
+      <div>
+        <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
+          Get to know <span className="bg-brand-blue text-white px-4 brutal-border">my story</span>
+        </h2>
+        <p className="text-xl text-gray-600 mb-8">
+          I grew up in <strong>China</strong> and moved to the <strong>United States</strong> as a high school freshman. I first studied in <strong>Worcester, Massachusetts</strong>, at St. Peter Marian Junior Senior High School, and later moved to <strong>Los Angeles</strong>, where I attended San Gabriel Academy and graduated from high school. I went on to earn my bachelor’s degree from <strong>UC San Diego</strong>. After spending a year working, I came to <strong>New York</strong> to pursue my master’s degree in <strong>Arts Administration</strong> at <strong>Columbia University</strong>. Living and studying across different places has given me a broader perspective and continues to shape my interests in arts, culture, and meaningful public engagement.
+        </p>
+        <div className="space-y-8 mb-10">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 flex-shrink-0">
+              <img src="/ucsd.png" alt="UCSD Logo" className="w-full h-full object-contain" />
+            </div>
+            <div>
+              <h4 className="font-black text-xl">University of California, San Diego</h4>
+              <p className="text-gray-500 font-medium">[Provost Honors Student]</p>
+              <p className="text-gray-600 mt-2">
+                <span className="font-bold">Major:</span> Visual Art - Media<br/>
+                <span className="font-bold">Minor:</span> Communication
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 flex-shrink-0">
+               <img src="/tc.png" alt="Teachers College Logo" className="w-full h-full object-contain" />
+            </div>
+            <div>
+              <h4 className="font-black text-xl">Teachers College, Columbia University</h4>
+              <p className="text-gray-600 mt-2">
+                <span className="font-bold"> Degree: </span> Master of Art in Arts Administration
+              </p>
+            </div>
+          </div>
+        </div>
+        <button className="brutal-btn-black flex items-center gap-2">
+          <User size={20} /> More about me
+        </button>
+      </div>
     </section>
   );
 };
@@ -277,60 +328,6 @@ const Portfolio = () => {
           </div>
         </div>
       </motion.div>
-    </section>
-  );
-};
-
-const About = () => {
-  return (
-    <section id="about" className="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-      <div className="relative">
-        <div className="w-full aspect-square rounded-full border-4 border-black bg-brand-pink overflow-hidden brutal-shadow-lg">
-           <img 
-            src="https://picsum.photos/seed/about/800/800" 
-            alt="About" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-      </div>
-      <div>
-        <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
-          Get to know <span className="bg-brand-blue text-white px-4 brutal-border">my story</span>
-        </h2>
-        <p className="text-xl text-gray-600 mb-8">
-          I grew up in <strong>China</strong> and moved to the <strong>United States</strong> as a high school freshman. I first studied in <strong>Worcester, Massachusetts</strong>, at St. Peter Marian Junior Senior High School, and later moved to <strong>Los Angeles</strong>, where I attended San Gabriel Academy and graduated from high school. I went on to earn my bachelor’s degree from <strong>UC San Diego</strong>. After spending a year working, I came to <strong>New York</strong> to pursue my master’s degree in <strong>Arts Administration</strong> at <strong>Columbia University</strong>. Living and studying across different places has given me a broader perspective and continues to shape my interests in arts, culture, and meaningful public engagement.
-        </p>
-        <div className="space-y-8 mb-10">
-          <div className="flex items-start gap-4">
-            <div className="w-14 h-14 flex-shrink-0">
-              <img src="/ucsd.png" alt="UCSD Logo" className="w-full h-full object-contain" />
-            </div>
-            <div>
-              <h4 className="font-black text-xl">University of California, San Diego</h4>
-              <p className="text-gray-500 font-medium">[Provost Honors Student]</p>
-              <p className="text-gray-600 mt-2">
-                <span className="font-bold">Major:</span> Visual Art - Media<br/>
-                <span className="font-bold">Minor:</span> Communication
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="w-14 h-14 flex-shrink-0">
-               <img src="/tc.png" alt="Teachers College Logo" className="w-full h-full object-contain" />
-            </div>
-            <div>
-              <h4 className="font-black text-xl">Teachers College, Columbia University</h4>
-              <p className="text-gray-600 mt-2">
-                <span className="font-bold"> Degree: </span> Master of Art in Arts Administration
-              </p>
-            </div>
-          </div>
-        </div>
-        <button className="brutal-btn-black flex items-center gap-2">
-          <User size={20} /> More about me
-        </button>
-      </div>
     </section>
   );
 };
