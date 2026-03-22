@@ -78,7 +78,7 @@ const Navbar = ({ onContactClick }) => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="nav-pill justify-between p-2"
       >
-        <div className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
+        <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
           <img src="/food.png" alt="Dim Sum Icon" className="w-full h-full object-cover" />
         </div>
         <div className="hidden md:flex items-center gap-4">
