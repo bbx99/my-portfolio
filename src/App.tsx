@@ -79,7 +79,7 @@ const Navbar = ({ onContactClick }) => {
         className="nav-pill justify-between p-2"
       >
         <div className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
-          <img src="/food.jpg" alt="Dim Sum Icon" className="w-full h-full object-cover" />
+          <img src="/food.png" alt="Dim Sum Icon" className="w-full h-full object-cover" />
         </div>
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
