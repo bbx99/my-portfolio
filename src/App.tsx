@@ -86,7 +86,7 @@ const Navbar = ({ onContactClick }) => {
             <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors">{item.name}</a>
           ))}
         </div>
-        <button onClick={onContactClick} className="w-9 h-9 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
           <Mail size={16} />
         </button>
       </motion.div>
