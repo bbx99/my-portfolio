@@ -165,7 +165,7 @@ const About = () => {
       <div className="relative">
         <div className="w-full aspect-square rounded-full border-4 border-black bg-brand-pink overflow-hidden brutal-shadow-lg">
            <img 
-            src="https://picsum.photos/seed/about/800/800" 
+            src="/m2.JPG" 
             alt="About" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -205,9 +205,14 @@ const About = () => {
             </div>
           </div>
         </div>
-        <button className="brutal-btn-black flex items-center gap-2">
+        <a
+          href="https://www.linkedin.com/in/qinyan-zhao"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="brutal-btn-black flex items-center gap-2"
+        >
           <User size={20} /> More about me
-        </button>
+        </a>
       </div>
     </section>
   );
