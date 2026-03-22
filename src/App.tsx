@@ -209,7 +209,7 @@ const About = () => {
           href="https://www.linkedin.com/in/qinyan-zhao"
           target="_blank"
           rel="noopener noreferrer"
-          className="brutal-btn-black flex items-center gap-2"
+          className="brutal-btn-black inline-flex items-center gap-2"
         >
           <User size={20} /> More about me
         </a>
