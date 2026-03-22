@@ -148,7 +148,7 @@ const About = ({ onContactClick }) => {
       </div>
       <div>
         <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
-          Get to know <span className="bg-brand-blue text-white px-4 brutal-border">my story</span>
+          Get to know <br /> <span className="bg-brand-blue text-white px-4 brutal-border">my story</span>
         </h2>
         <p className="text-xl text-gray-600 mb-8">
           I grew up in <strong>China</strong> and moved to the <strong>United States</strong> as a high school freshman. I first studied in <strong>Worcester, Massachusetts</strong>, and later moved to <strong>Los Angeles</strong>. I went on to earn my bachelor’s degree from <strong>UC San Diego</strong>. After a year working, I came to <strong>New York</strong> to pursue my master’s degree in <strong>Arts Administration</strong> at <strong>Columbia University</strong>. Living and studying across different places has given me a broader perspective and continues to shape my interests in arts, culture, and meaningful public engagement.
