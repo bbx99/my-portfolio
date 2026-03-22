@@ -32,17 +32,6 @@ const FloatingShapes = () => {
   )
 }
 
-const HarGowIcon = () => (
-  <svg viewBox="0 0 100 100" className="w-full h-full">
-    <path d="M20 70 C 20 90, 80 90, 80 70 C 95 50, 80 30, 50 30 C 20 30, 5 50, 20 70 Z" fill="#FFDDC1" stroke="#E4A577" strokeWidth="3"/>
-    <path d="M30 65 Q 35 60, 40 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
-    <path d="M40 65 Q 45 60, 50 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
-    <path d="M50 65 Q 55 60, 60 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
-    <path d="M60 65 Q 65 60, 70 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
-    <circle cx="50" cy="45" r="8" fill="#FF8C69"/>
-  </svg>
-);
-
 const Navbar = ({ onContactClick }) => {
   const [hidden, setHidden] = useState(false);
 
@@ -76,12 +65,12 @@ const Navbar = ({ onContactClick }) => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="nav-pill justify-between p-2"
       >
-        <div className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center font-black text-xl p-1">
-          <HarGowIcon />
+        <div className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
+          <img src="/food.jpg" alt="Dim Sum Icon" className="w-full h-full object-cover" />
         </div>
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
-            <a key={item.name} href={item.href} className="font-bold text-base hover:text-brand-pink transition-colors">{item.name}</a>
+            <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors">{item.name}</a>
           ))}
         </div>
         <button onClick={onContactClick} className="w-9 h-9 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
