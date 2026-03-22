@@ -78,16 +78,16 @@ const Navbar = ({ onContactClick }) => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="nav-pill justify-between p-2"
       >
-        <div className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
-          <img src="/food.jpg" alt="Dim Sum Icon" className="w-full h-full object-cover" />
+        <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
+          <img src="/food.png" alt="Dim Sum Icon" className="w-full h-full object-cover" />
         </div>
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors">{item.name}</a>
           ))}
         </div>
-        <button onClick={onContactClick} className="w-9 h-9 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
-          <Mail size={16} />
+        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+          <Mail size={20} />
         </button>
       </motion.div>
     </nav>
