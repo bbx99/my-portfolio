@@ -138,7 +138,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
           <button className="brutal-btn-black flex items-center gap-2 w-full sm:w-auto">
-            <Mail size={20} /> Get in touch
+            <Mail size={20} /> Contact Me!
           </button>
         </div>
       </motion.div>
