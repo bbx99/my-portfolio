@@ -149,7 +149,7 @@ const Hero = () => {
         className="relative flex items-center justify-center"
       >
         <img 
-          src="/my.png" 
+          src="/my profo photo.png" 
           alt="Qinyan Zhao" 
           className="w-full max-w-md aspect-[4/5] object-cover rounded-3xl brutal-border brutal-shadow-lg"
           referrerPolicy="no-referrer"
