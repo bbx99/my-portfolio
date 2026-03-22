@@ -1,5 +1,5 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie } from 'lucide-react';
-import { motion } from 'motion/react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 
 const FloatingShapes = () => {
@@ -57,10 +57,10 @@ const FloatingShapes = () => {
         </motion.div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-const Navbar = () => {
+const Navbar = ({ onContactClick }) => {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const Navbar = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         setHidden(false);
-      }, 300); // Adjust timeout as needed
+      }, 300);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -112,7 +112,7 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <button className="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white brutal-border">
+        <button onClick={onContactClick} className="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white brutal-border">
           <Mail size={20} />
         </button>
       </motion.div>
@@ -120,7 +120,7 @@ const Navbar = () => {
   );
 };
 
-const Hero = () => {
+const Hero = ({ onContactClick }) => {
   return (
     <section className="pt-20 pb-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <motion.div
@@ -137,8 +137,8 @@ const Hero = () => {
           Experience in arts administration, marketing, and event coordination across cultural and educational settings. I enjoy bringing people, ideas, and organizations together through thoughtful planning, strong communication, and audience focused experiences.
         </p>
         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-          <button className="brutal-btn-black flex items-center gap-2 w-full sm:w-auto">
-            <Mail size={20} /> Get in touch
+          <button onClick={onContactClick} className="brutal-btn-black flex items-center gap-2 w-full sm:w-auto">
+            <Mail size={20} /> Contact Me!
           </button>
           <button className="brutal-btn-white flex items-center gap-2 w-full sm:w-auto">
             <Briefcase size={20} /> View portfolio
@@ -281,7 +281,7 @@ const Portfolio = () => {
   );
 };
 
-const About = () => {
+const About = ({ onContactClick }) => {
   return (
     <section id="about" className="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
       <div className="relative">
@@ -325,8 +325,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <button className="brutal-btn-black flex items-center gap-2">
-          <User size={20} /> More about me
+        <button onClick={onContactClick} className="brutal-btn-black flex items-center gap-2">
+          <Mail size={20} /> Contact Me!
         </button>
       </div>
     </section>
@@ -375,13 +375,13 @@ const Experience = () => {
   );
 };
 
-const Footer = () => {
+const Footer = ({ onContactClick }) => {
   return (
     <footer className="bg-black text-white pt-32 pb-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Newsletter */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-32">
-          <div className="w-32 h-32 rounded-full bg-brand-blue brutal-border flex items-center justify-center">
+          <div onClick={onContactClick} className="w-32 h-32 rounded-full bg-brand-blue brutal-border flex items-center justify-center cursor-pointer">
              <Mail size={48} />
           </div>
           <div className="flex-1 bg-white p-4 rounded-3xl brutal-border flex flex-col md:flex-row items-center gap-4">
@@ -452,6 +452,66 @@ const Footer = () => {
     </footer>
   );
 };
+
+const ContactModal = ({ email, onClose }) => {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="brutal-card bg-white max-w-sm w-full relative"
+      >
+        <button onClick={onClose} className="absolute -top-3 -right-3 w-10 h-10 bg-brand-pink rounded-full flex items-center justify-center brutal-border text-white">
+          <X size={24} />
+        </button>
+        <div className="p-8">
+          <h3 className="text-2xl font-black mb-4">Contact Me</h3>
+          <p className="text-gray-600 mb-6">You can reach me at the email address below.</p>
+          <div className="bg-gray-100 brutal-border p-4 rounded-lg flex items-center justify-between gap-4">
+            <span className="font-mono text-lg truncate">{email}</span>
+            <button onClick={copyToClipboard} className="brutal-btn-white flex-shrink-0">
+              {copied ? <Check size={20} /> : <Copy size={20} />}
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const email = "q.zhao@columbia.edu";
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div className="min-h-screen">
+      <FloatingShapes />
+      <Navbar onContactClick={openModal} />
+      <Hero onContactClick={openModal} />
+      <Services />
+      <Portfolio />
+      <About onContactClick={openModal} />
+      <Experience />
+      <Footer onContactClick={openModal} />
+
+      <AnimatePresence>
+        {isModalOpen && <ContactModal email={email} onClose={closeModal} />}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function App() {
   return (
