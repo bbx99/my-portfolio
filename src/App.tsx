@@ -377,17 +377,17 @@ const ContactModal = ({ email, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
-        className="brutal-card bg-white max-w-sm w-full relative"
+        className="brutal-card bg-white max-w-lg w-full relative"
       >
         <button onClick={onClose} className="absolute -top-3 -right-3 w-10 h-10 bg-brand-pink rounded-full flex items-center justify-center brutal-border text-white">
-          <X size={24} />
+          <X size={24} strokeWidth={3} />
         </button>
-        <div className="p-8">
+        <div className="p-10">
           <h3 className="text-2xl font-black mb-4">Contact Me</h3>
           <p className="text-gray-600 mb-6">You can reach me at the email address below.</p>
           <div className="bg-gray-100 brutal-border p-4 rounded-lg flex items-center justify-between gap-4">
@@ -414,9 +414,9 @@ export default function App() {
       <FloatingShapes />
       <Navbar onContactClick={openModal} />
       <Hero onContactClick={openModal} />
+      <About onContactClick={openModal} />
       <Services />
       <Portfolio />
-      <About onContactClick={openModal} />
       <Experience />
       <Footer onContactClick={openModal} />
 
