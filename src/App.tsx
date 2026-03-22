@@ -4,11 +4,24 @@ import { useState, useEffect } from 'react';
 
 const FloatingShapes = () => {
   const shapes = [
+    // Original shapes
     { Icon: Star, color: 'text-brand-yellow', top: '10%', left: '5%', size: 40, delay: 0 },
     { Icon: Circle, color: 'text-brand-pink', top: '25%', left: '85%', size: 30, delay: 1 },
     { Icon: Square, color: 'text-brand-blue', top: '60%', left: '10%', size: 35, delay: 2 },
     { Icon: Triangle, color: 'text-brand-purple', top: '80%', left: '90%', size: 25, delay: 1.5 },
     { Icon: Sparkles, color: 'text-brand-pink', top: '45%', left: '75%', size: 30, delay: 0.5 },
+
+    // New cute animals and food
+    { Icon: Pizza, color: 'text-orange-400', top: '12%', left: '20%', size: 35, delay: 0.2 },
+    { Icon: Coffee, color: 'text-amber-700', top: '85%', left: '15%', size: 30, delay: 1.1 },
+    { Icon: IceCream, color: 'text-pink-300', top: '40%', left: '90%', size: 40, delay: 0.7 },
+    { Icon: Cat, color: 'text-gray-400', top: '65%', left: '80%', size: 35, delay: 2.1 },
+    { Icon: Dog, color: 'text-amber-500', top: '20%', left: '40%', size: 30, delay: 1.4 },
+    { Icon: Bird, color: 'text-sky-400', top: '5%', left: '80%', size: 25, delay: 0.9 },
+    { Icon: Rabbit, color: 'text-rose-200', top: '75%', left: '30%', size: 40, delay: 1.6 },
+    { Icon: Fish, color: 'text-blue-400', top: '50%', left: '5%', size: 30, delay: 2.3 },
+    { Icon: Snail, color: 'text-emerald-400', top: '92%', left: '60%', size: 25, delay: 0.4 },
+    { Icon: Cookie, color: 'text-yellow-700', top: '30%', left: '60%', size: 35, delay: 1.9 },
   ];
 
   return (
