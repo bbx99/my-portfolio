@@ -87,7 +87,7 @@ const Navbar = ({ onContactClick }) => {
           ))}
         </div>
         <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
-          <Mail size={16} />
+          <Mail size={20} />
         </button>
       </motion.div>
     </nav>
