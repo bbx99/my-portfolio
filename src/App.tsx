@@ -384,7 +384,7 @@ const ContactModal = ({ email, onClose }) => {
         exit={{ scale: 0.9, opacity: 0 }}
         className="brutal-card bg-white max-w-lg w-full relative"
       >
-        <button onClick={onClose} className="absolute -top-3 -right-3 w-10 h-10 bg-brand-pink rounded-full flex items-center justify-center brutal-border text-white">
+        <button onClick={onClose} className="absolute top-2 right-2 w-10 h-10 bg-brand-pink rounded-full flex items-center justify-center brutal-border text-white">
           <X size={24} strokeWidth={3} />
         </button>
         <div className="p-10">
