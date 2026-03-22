@@ -32,6 +32,17 @@ const FloatingShapes = () => {
   )
 }
 
+const HarGowIcon = () => (
+  <svg viewBox="0 0 100 100" className="w-full h-full">
+    <path d="M20 70 C 20 90, 80 90, 80 70 C 95 50, 80 30, 50 30 C 20 30, 5 50, 20 70 Z" fill="#FFDDC1" stroke="#E4A577" strokeWidth="3"/>
+    <path d="M30 65 Q 35 60, 40 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
+    <path d="M40 65 Q 45 60, 50 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
+    <path d="M50 65 Q 55 60, 60 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
+    <path d="M60 65 Q 65 60, 70 65" stroke="#F4C4A2" strokeWidth="2" fill="none"/>
+    <circle cx="50" cy="45" r="8" fill="#FF8C69"/>
+  </svg>
+);
+
 const Navbar = ({ onContactClick }) => {
   const [hidden, setHidden] = useState(false);
 
@@ -58,21 +69,23 @@ const Navbar = ({ onContactClick }) => {
   ];
 
   return (
-    <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-3xl px-4">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-2xl px-4">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: hidden ? -100 : 0, opacity: hidden ? 0 : 1 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="nav-pill justify-between"
+        className="nav-pill justify-between p-2"
       >
-        <div className="w-10 h-10 rounded-full border-4 border-black flex items-center justify-center font-black text-xl">O</div>
-        <div className="hidden md:flex items-center gap-6">
+        <div className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center font-black text-xl p-1">
+          <HarGowIcon />
+        </div>
+        <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
-            <a key={item.name} href={item.href} className="font-bold text-xl hover:text-brand-pink transition-colors">{item.name}</a>
+            <a key={item.name} href={item.href} className="font-bold text-base hover:text-brand-pink transition-colors">{item.name}</a>
           ))}
         </div>
-        <button onClick={onContactClick} className="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white brutal-border">
-          <Mail size={20} />
+        <button onClick={onContactClick} className="w-9 h-9 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+          <Mail size={16} />
         </button>
       </motion.div>
     </nav>
