@@ -45,7 +45,7 @@ const FloatingShapes = () => {
   )
 }
 
-const Navbar = ({ onContactClick }) => {
+const Navbar = ({ onContactClick, onResumeClick }) => {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -83,7 +83,17 @@ const Navbar = ({ onContactClick }) => {
         </div>
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
-            <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors">{item.name}</a>
+            item.name === 'Resume' ? (
+              <button 
+                key={item.name} 
+                onClick={onResumeClick} 
+                className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-0"
+              >
+                {item.name}
+              </button>
+            ) : (
+              <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors">{item.name}</a>
+            )
           ))}
         </div>
         <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
@@ -469,7 +479,7 @@ export default function App() {
   return (
     <div className="min-h-screen">
       <FloatingShapes />
-      <Navbar onContactClick={openModal} />
+      <Navbar onContactClick={openModal} onResumeClick={openResumeModal} />
       <Hero onContactClick={openModal} />
       <About onContactClick={openModal} />
       <Services />
