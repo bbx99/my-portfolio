@@ -1,4 +1,4 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse, Palette, Megaphone } from 'lucide-react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse, Palette, Megaphone, Wand2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -375,13 +375,32 @@ const Footer = ({ onResumeClick }) => {
   return (
     <footer className="bg-black text-white pt-32 pb-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-32">
-          <blockquote className="text-3xl md:text-4xl font-black text-white italic mb-4">
+        <motion.div
+          whileHover="hover"
+          className="relative text-center mb-32 group"
+        >
+          <motion.div 
+            variants={{ hover: { scale: 1.2, rotate: -15, color: '#FFF500' }}}
+            transition={{ type: 'spring', stiffness: 300 }}
+            className="absolute -top-8 left-1/2 -translate-x-12 text-gray-700"
+          >
+            <Wand2 size={40} />
+          </motion.div>
+          <motion.div 
+            variants={{ hover: { scale: [1, 1.5, 1], opacity: [0, 1, 0], color: '#FFF500' }}}
+            transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 0.5 }}
+            className="absolute -top-4 left-1/2 -translate-x-4 opacity-0 text-gray-700"
+          >
+            <Sparkles size={24} />
+          </motion.div>
+          
+          <blockquote className="text-3xl md:text-4xl font-black text-white italic mb-4 transition-colors group-hover:text-gray-300">
             "You control your destiny, you don’t need magic to do it."
           </blockquote>
-          <p className="text-xl text-gray-400 mb-6">你掌握自己的命运，你并不需要魔法来做到这一点。</p>
+          <p className="text-xl text-gray-400 mb-6 transition-colors group-hover:text-gray-500">你掌握自己的命运，你并不需要魔法来做到这一点。</p>
           <p className="text-brand-yellow font-bold text-lg">— Merida, Brave</p>
-        </div>
+        </motion.div>
+
         <div className="flex flex-col items-center justify-center mb-20">
           <h4 className="text-xl font-black mb-6">Explore</h4>
           <div className="flex flex-wrap items-center justify-center gap-4">
