@@ -78,10 +78,10 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: hidden ? -100 : 0, opacity: hidden ? 0 : 1 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="nav-pill justify-between p-2"
+        className="nav-pill justify-between p-2 flex items-center"
       >
         <img src="/food.png" alt="Dim Sum Icon" className="w-16 h-16 object-contain" />
-        <div className="bg-white rounded-full p-2 flex items-center brutal-border">
+        <div className="flex items-center">
           <div className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
               item.name === 'Resume' ? (
