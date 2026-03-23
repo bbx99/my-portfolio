@@ -217,7 +217,7 @@ const Services = () => {
     },
     {
       title: 'Event Coordination',
-      desc: 'Full-service planning for galas, exhibitions, and performances.',
+      desc: <>I’ve supported events and projects in both <strong>student facing</strong> and <strong>public facing settings</strong>, which has helped me build a <strong>practical, adaptable approach to coordination</strong>. Growing up around multiple cultures has made me especially aware of how different communities may have different needs, and I try to bring that perspective into the way I <strong>support programs, communication, and audience experience</strong>.</>,
       color: 'bg-gray-100',
       icon: <Sparkles className="text-brand-purple" size={48} />
     }
