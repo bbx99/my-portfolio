@@ -319,35 +319,36 @@ const Experience = ({ onSeeResumeClick }) => {
           </div>
           <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2 text-xl"> <FileText size={24} /> See full resume</button>
         </div>
-        <div className="relative space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-yellow-200 rounded-2xl">
-          <div className="sticky top-4 z-10 text-center">
-            <div className="inline-flex items-center gap-2 bg-black/10 text-black font-bold px-4 py-2 rounded-full">
+        <div>
+          <div className="text-center mb-4">
+            <div className="inline-flex items-center gap-2 bg-brand-pink text-white font-bold px-4 py-2 rounded-full brutal-border">
               <Mouse size={20} />
               <span>Scroll for more</span>
             </div>
           </div>
-
-          {jobs.map((job, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-            >
-              <div className="brutal-card p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <span className="font-bold text-gray-500">{job.date}</span>
-                  <div className={`w-12 h-12 rounded-full border-2 border-black ${job.color} flex items-center justify-center`}>
-                    {job.icon || <ArrowUpRight size={24} />}
+          <div className="space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-yellow-200 rounded-2xl">
+            {jobs.map((job, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="brutal-card p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="font-bold text-gray-500">{job.date}</span>
+                    <div className={`w-12 h-12 rounded-full border-2 border-black ${job.color} flex items-center justify-center`}>
+                      {job.icon || <ArrowUpRight size={24} />}
+                    </div>
                   </div>
+                  <h3 className="text-2xl font-black mb-1">{job.title}</h3>
+                  {job.company && <h4 className="text-lg font-bold text-gray-500 mb-3">{job.company}</h4>}
+                  <p className="text-gray-600">{job.description}</p>
                 </div>
-                <h3 className="text-2xl font-black mb-1">{job.title}</h3>
-                {job.company && <h4 className="text-lg font-bold text-gray-500 mb-3">{job.company}</h4>}
-                <p className="text-gray-600">{job.description}</p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
