@@ -205,7 +205,7 @@ const Services = () => {
   const services = [
     {
       title: 'Arts Administration',
-      desc: 'Strategic planning and operational support for cultural organizations.',
+      desc: 'My experience in galleries, museums, and cultural environments has given me a strong foundation in exhibition support, cultural programming, gallery operations, and audience facing work. I’m especially interested in helping creative organizations run in a way that feels thoughtful, organized, and welcoming to the public.',
       color: 'bg-gray-100',
       icon: <Briefcase className="text-brand-blue" size={48} />
     },
@@ -237,7 +237,7 @@ const Services = () => {
             whileHover={{ y: -10 }}
             className="brutal-card p-0"
           >
-            <div className={`h-64 ${s.color} flex items-center justify-center border-b-2 border-black`}>
+            <div className={`h-40 ${s.color} flex items-center justify-center border-b-2 border-black`}>
               {s.icon}
             </div>
             <div className="p-8">
