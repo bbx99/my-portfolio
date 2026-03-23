@@ -205,7 +205,7 @@ const Services = () => {
   const services = [
     {
       title: 'Arts Administration',
-      desc: 'My experience in galleries, museums, and cultural environments has given me a strong foundation in exhibition support, cultural programming, gallery operations, and audience facing work. I’m especially interested in helping creative organizations run in a way that feels thoughtful, organized, and welcoming to the public.',
+      desc: <>My experience in galleries, museums, and cultural environments has given me a strong foundation in <strong>exhibition support</strong>, <strong>cultural programming</strong>, <strong>gallery operations</strong>, and <strong>audience facing work</strong>. I’m especially interested in helping creative organizations run in a way that feels thoughtful, organized, and welcoming to the public.</>,
       color: 'bg-gray-100',
       icon: <Palette className="text-brand-blue" size={48} />
     },
