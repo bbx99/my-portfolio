@@ -157,7 +157,7 @@ const About = ({ onContactClick }) => {
         </div>
       </div>
       <div>
-        <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
+        <h2 className="text-6xl md:text-7xl font-black mb-8 leading-tight">
           Get to know <br /> <span className="bg-brand-blue text-white px-4 brutal-border">my story</span>
         </h2>
         <p className="text-xl text-gray-600 mb-8">
