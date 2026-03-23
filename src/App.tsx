@@ -375,7 +375,7 @@ const Footer = ({ onResumeClick }) => {
             ))}
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500"><p>© 2026 Paperfolio X. All rights reserved.</p></div>
+        <div className="border-t border-gray-800 pt-8 text-center text-gray-500"><p>© 2026 Kaylee Zhao. All rights reserved.</p></div>
       </div>
     </footer>
   );
