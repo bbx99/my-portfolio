@@ -69,43 +69,32 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
     { name: 'Strengths', href: '#strengths' },
     { name: 'Projects', href: '#portfolio' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Resume', href: '#resume' },
   ];
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-2xl px-4">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-3xl px-4">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: hidden ? -100 : 0, opacity: hidden ? 0 : 1 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="nav-pill p-2 flex items-center"
+        className="nav-pill flex items-center justify-between p-2"
       >
         <img src="/food.png" alt="Dim Sum Icon" className="w-16 h-16 object-contain" />
         
-        <div className="hidden md:flex items-center gap-2 ml-4">
+        <div className="hidden md:flex items-center gap-3">
           {navItems.map((item) => (
-            item.name === 'Resume' ? (
-              <button 
-                key={item.name} 
-                onClick={onResumeClick} 
-                className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-2"
-              >
-                {item.name}
-              </button>
-            ) : (
-              <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors p-2">{item.name}</a>
-            )
+            <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors p-2">
+              {item.name}
+            </a>
           ))}
+          <button onClick={onResumeClick} className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-2">
+            Resume
+          </button>
         </div>
 
-        <motion.button 
-          onClick={onContactClick}
-          whileTap={{ scale: [1, 0.8, 1.2, 1] }}
-          transition={{ duration: 0.3 }}
-          className="ml-auto pl-3 border-l-2 border-gray-200"
-        >
-          <Mail size={24} className="text-blue-500" />
-        </motion.button>
+        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+          <Mail size={20} />
+        </button>
       </motion.div>
     </nav>
   );
