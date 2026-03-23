@@ -227,7 +227,7 @@ const Services = () => {
     <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-          My broad <span className="bg-brand-pink text-white px-4 brutal-border">set of services</span>
+          My <span className="bg-brand-pink text-white px-4 brutal-border">core strengths</span>
         </h2>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
