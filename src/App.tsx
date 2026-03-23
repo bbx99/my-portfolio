@@ -81,24 +81,31 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
         className="nav-pill justify-between p-2"
       >
         <img src="/food.png" alt="Dim Sum Icon" className="w-16 h-16 object-contain" />
-        <div className="hidden md:flex items-center gap-2">
-          {navItems.map((item) => (
-            item.name === 'Resume' ? (
-              <button 
-                key={item.name} 
-                onClick={onResumeClick} 
-                className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-0"
-              >
-                {item.name}
-              </button>
-            ) : (
-              <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors">{item.name}</a>
-            )
-          ))}
+        <div className="bg-white rounded-full p-2 flex items-center brutal-border">
+          <div className="hidden md:flex items-center gap-2">
+            {navItems.map((item) => (
+              item.name === 'Resume' ? (
+                <button 
+                  key={item.name} 
+                  onClick={onResumeClick} 
+                  className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-2"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors p-2">{item.name}</a>
+              )
+            ))}
+          </div>
+          <motion.button 
+            onClick={onContactClick}
+            whileTap={{ scale: [1, 0.8, 1.2, 1] }}
+            transition={{ duration: 0.3 }}
+            className="ml-2 pl-3 border-l-2 border-gray-200"
+          >
+            <Mail size={24} className="text-blue-500" />
+          </motion.button>
         </div>
-        <button onClick={onContactClick} className="w-24 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
-          <Mail size={24} />
-        </button>
       </motion.div>
     </nav>
   );
