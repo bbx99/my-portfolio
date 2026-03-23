@@ -90,10 +90,11 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
           <button onClick={onResumeClick} className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-2">
             Resume
           </button>
-          <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
-            <Mail size={20} />
-          </button>
         </div>
+
+        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+          <Mail size={20} />
+        </button>
       </motion.div>
     </nav>
   );
