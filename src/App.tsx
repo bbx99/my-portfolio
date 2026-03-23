@@ -73,7 +73,7 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
   ];
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-2xl px-4">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-3xl px-4">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: hidden ? -100 : 0, opacity: hidden ? 0 : 1 }}
@@ -81,7 +81,7 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
         className="nav-pill justify-between p-2"
       >
         <img src="/food.png" alt="Dim Sum Icon" className="w-16 h-16 object-contain" />
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
           {navItems.map((item) => (
             item.name === 'Resume' ? (
               <button 
