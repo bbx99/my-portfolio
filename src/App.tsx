@@ -227,7 +227,7 @@ const Services = () => {
   return (
     <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-black mb-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
           My broad <span className="bg-brand-pink text-white px-4 brutal-border">set of services</span>
         </h2>
       </div>
@@ -256,7 +256,7 @@ const Portfolio = () => {
   return (
     <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-black mb-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
           Take a look at my <br />
           <span className="bg-brand-yellow text-black px-4 brutal-border">brand project</span>
         </h2>
