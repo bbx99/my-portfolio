@@ -317,7 +317,7 @@ const Experience = ({ onSeeResumeClick }) => {
           </p>
           <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
         </div>
-        <div className="space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-neutral-900 rounded-2xl">
+        <div className="space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-yellow-200 rounded-2xl">
           {jobs.map((job, i) => (
             <motion.div
               key={i}
