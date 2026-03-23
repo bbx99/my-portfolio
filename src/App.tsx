@@ -278,7 +278,7 @@ const Portfolio = () => {
           <div className="inline-block bg-black text-white px-4 py-1 rounded-full text-sm font-bold w-fit mb-6">Jade Brand ｜ E-commerce ｜ Content ｜ Website</div>
           <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight">A jade brand｜Co-created</h3>
           <p className="text-gray-600 text-lg mb-10 max-w-md">ANAM CARA is a jade brand I co-created with a friend. Through this project, I’ve been involved in brand presentation, website building, product storytelling, and digital content, which has helped me better understand how a creative brand connects with its audience online.</p>
-          <a href="https://anamcarajade.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-black text-lg hover:gap-4 transition-all">View case study <ArrowUpRight size={24} /></a>
+          <a href="https://anamcarajade.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-black text-lg hover:gap-4 transition-all">Visit Anam Cara <ArrowUpRight size={24} /></a>
         </div>
         
         {/* Right Video */}
