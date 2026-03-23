@@ -81,20 +81,22 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
       >
         <img src="/food.png" alt="Dim Sum Icon" className="w-16 h-16 object-contain" />
         
-        <div className="hidden md:flex items-center gap-3">
-          {navItems.map((item) => (
-            <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors p-2">
-              {item.name}
-            </a>
-          ))}
-          <button onClick={onResumeClick} className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-2">
-            Resume
+        <div className="flex items-center">
+          <div className="hidden md:flex items-center gap-3">
+            {navItems.map((item) => (
+              <a key={item.name} href={item.href} className="font-bold text-lg hover:text-brand-pink transition-colors p-2">
+                {item.name}
+              </a>
+            ))}
+            <button onClick={onResumeClick} className="font-bold text-lg hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-2">
+              Resume
+            </button>
+          </div>
+
+          <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border ml-10">
+            <Mail size={20} />
           </button>
         </div>
-
-        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
-          <Mail size={20} />
-        </button>
       </motion.div>
     </nav>
   );
