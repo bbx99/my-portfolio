@@ -1,4 +1,4 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse, Palette } from 'lucide-react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse, Palette, Megaphone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -211,9 +211,9 @@ const Services = () => {
     },
     {
       title: 'Marketing & Comms',
-      desc: 'Audience engagement and promotional campaigns for cultural events.',
+      desc: <>Through work in media, branding, and digital content, I’ve built experience in <strong>audience communication</strong>, <strong>social media support</strong>, <strong>website updates</strong>, and <strong>online presentation</strong>. I enjoy using content and communication as a way to help brands and public facing organizations connect more clearly and meaningfully with their audiences.</>,
       color: 'bg-gray-100',
-      icon: <Send className="text-brand-pink" size={48} />
+      icon: <Megaphone className="text-brand-pink" size={48} />
     },
     {
       title: 'Event Coordination',
