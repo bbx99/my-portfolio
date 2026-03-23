@@ -1,5 +1,5 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 const FloatingShapes = () => {
@@ -296,7 +296,7 @@ const Portfolio = () => {
   );
 };
 
-const Experience = () => {
+const Experience = ({ onSeeResumeClick }) => {
   const jobs = [
     { date: 'Jan 2024 – Jan 2025', title: 'Gallery Intern', company: ':iidrr Gallery', description: 'Supported exhibitions, artist coordination, social media content, and visitor engagement in a fast paced contemporary art environment. This role gave me hands-on experience in both gallery operations and the public-facing side of cultural work.', color: 'bg-brand-yellow', icon: <Image size={24} /> },
     { date: 'Jul 2022 – Feb 2023', title: 'Marketing Media Operations Coordinator', company: 'TVB (USA) Inc.', description: 'Supported digital media operations through content coordination, SEO, branding, and partnership work. This experience deepened my understanding of audience growth, platform communication, and how creative content connects with the market.', color: 'bg-brand-pink', icon: <Youtube size={24} /> },
@@ -314,7 +314,7 @@ const Experience = () => {
           <p className="text-xl text-gray-400 mb-10">
             My professional experience spans galleries, museums, media, and event settings. Through these roles, I’ve developed skills in audience engagement, digital communication, project coordination, public facing support, and website building across cultural and creative environments.
           </p>
-          <button className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
+          <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
         </div>
         <div className="space-y-8">
           {jobs.map((job, i) => (
@@ -420,12 +420,51 @@ const ContactModal = ({ email, onClose }) => {
   );
 };
 
+const ResumeModal = ({ onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="brutal-card bg-white max-w-3xl w-full relative p-4"
+      >
+        <button onClick={onClose} className="absolute top-2 right-2 w-10 h-10 bg-brand-pink rounded-full flex items-center justify-center brutal-border text-white z-10">
+          <X size={24} strokeWidth={3} />
+        </button>
+        <div className="p-4">
+          <h3 className="text-2xl font-black mb-4 text-center">My Resume</h3>
+          <div className="bg-gray-100 brutal-border rounded-lg mb-6 overflow-hidden h-[70vh]">
+            <iframe
+              src="/Qinyan_Zhao_Resume.pdf"
+              title="My Resume"
+              className="w-full h-full"
+              frameBorder="0"
+            ></iframe>
+          </div>
+          <a
+            href="/Qinyan_Zhao_Resume.pdf"
+            download
+            className="brutal-btn-black w-full flex items-center justify-center gap-2"
+          >
+            <Download size={20} /> Download PDF
+          </a>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const email = "kayleezhao99@gmail.com";
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const openResumeModal = () => setIsResumeModalOpen(true);
+  const closeResumeModal = () => setIsResumeModalOpen(false);
 
   return (
     <div className="min-h-screen">
@@ -435,11 +474,12 @@ export default function App() {
       <About onContactClick={openModal} />
       <Services />
       <Portfolio />
-      <Experience />
+      <Experience onSeeResumeClick={openResumeModal} />
       <Footer onContactClick={openModal} />
 
       <AnimatePresence>
         {isModalOpen && <ContactModal email={email} onClose={closeModal} />}
+        {isResumeModalOpen && <ResumeModal onClose={closeResumeModal} />}
       </AnimatePresence>
     </div>
   );
