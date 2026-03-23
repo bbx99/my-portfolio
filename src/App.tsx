@@ -320,18 +320,12 @@ const Experience = ({ onSeeResumeClick }) => {
           <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2 text-xl"> <FileText size={24} /> See full resume</button>
         </div>
         <div className="relative space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-yellow-200 rounded-2xl">
-          <motion.div 
-            initial={{ opacity: 1, y: 0}} 
-            whileInView={{ opacity: 0, y: -20 }}
-            viewport={{ amount: 0.2, once: true }}
-            transition={{ duration: 0.5 }}
-            className="sticky top-4 z-10 text-center"
-          >
+          <div className="sticky top-4 z-10 text-center">
             <div className="inline-flex items-center gap-2 bg-black/10 text-black font-bold px-4 py-2 rounded-full">
               <Mouse size={20} />
               <span>Scroll for more</span>
             </div>
-          </motion.div>
+          </div>
 
           {jobs.map((job, i) => (
             <motion.div
