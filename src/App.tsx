@@ -96,9 +96,15 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
             )
           ))}
         </div>
-        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+        <motion.button
+          onClick={onContactClick}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-black text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 brutal-border text-lg font-bold"
+        >
           <Mail size={20} />
-        </button>
+          <span>Contact</span>
+        </motion.button>
       </motion.div>
     </nav>
   );
