@@ -299,8 +299,8 @@ const Portfolio = () => {
 const Experience = () => {
   const jobs = [
     { date: 'Jan 2024 – Jan 2025', title: 'Gallery Intern', company: ':iidrr Gallery', description: 'Supported exhibitions, artist coordination, social media content, and visitor engagement in a fast paced contemporary art environment. This role gave me hands-on experience in both gallery operations and the public-facing side of cultural work.', color: 'bg-brand-yellow', icon: <Image size={24} /> },
-    { date: 'Sep 2017 - Feb 2020', title: 'Web Designer', color: 'bg-brand-pink' },
-    { date: 'Sep 2011 - Feb 2020', title: 'TV Production', color: 'bg-brand-green' }
+    { date: 'Jul 2022 – Feb 2023', title: 'Marketing Media Operations Coordinator', company: 'TVB (USA) Inc.', description: 'Supported digital media operations through content coordination, SEO, branding, and partnership work. This experience deepened my understanding of audience growth, platform communication, and how creative content connects with the market.', color: 'bg-brand-pink', icon: <Youtube size={24} /> },
+    { date: 'Mar 2023 – Jun 2023', title: 'Account Executive Intern', company: 'Publicis Groupe – Leo Burnett', description: 'Worked across client communication, project coordination, timelines, and campaign support in an agency setting. It strengthened my ability to stay organized, communicate clearly, and adapt quickly in a collaborative environment.', color: 'bg-brand-green', icon: <Briefcase size={24} /> }
   ];
 
   return (
@@ -318,16 +318,16 @@ const Experience = () => {
         </div>
         <div className="space-y-8">
           {jobs.map((job, i) => (
-            <div key={i} className="brutal-card p-8">
-              <div className="flex justify-between items-start mb-6">
+            <div key={i} className="brutal-card p-6"> {/* Adjusted padding from p-8 to p-6 */}
+              <div className="flex justify-between items-start mb-4"> {/* Reduced margin-bottom */}
                 <span className="font-bold text-gray-500">{job.date}</span>
                 <div className={`w-12 h-12 rounded-full border-2 border-black ${job.color} flex items-center justify-center`}>
                   {job.icon || <ArrowUpRight size={24} />}
                 </div>
               </div>
-              <h3 className="text-3xl font-black mb-1">{job.title}</h3>
-              {job.company && <h4 className="text-xl font-bold text-gray-500 mb-4">{job.company}</h4>}
-              <p className="text-gray-600">{job.description || 'Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.'}</p>
+              <h3 className="text-2xl font-black mb-1">{job.title}</h3> {/* Slightly smaller title */}
+              {job.company && <h4 className="text-lg font-bold text-gray-500 mb-3">{job.company}</h4>} {/* Adjusted text size and margin */}
+              <p className="text-gray-600">{job.description}</p>
             </div>
           ))}
         </div>
