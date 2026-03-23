@@ -342,15 +342,12 @@ const Footer = ({ onContactClick }) => {
   return (
     <footer className="bg-black text-white pt-32 pb-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-32">
-          <div onClick={onContactClick} className="w-32 h-32 rounded-full bg-brand-blue brutal-border flex items-center justify-center cursor-pointer"><Mail size={48} /></div>
-          <div className="flex-1 bg-white p-4 rounded-3xl brutal-border flex flex-col md:flex-row items-center gap-4">
-            <h3 className="text-black text-3xl font-black px-4">Subscribe to my newsletter</h3>
-            <div className="flex-1 w-full relative">
-              <input type="email" placeholder="Enter your email address" className="w-full p-4 rounded-2xl border-2 border-black text-black focus:outline-none"/>
-              <button className="md:absolute right-2 top-2 bottom-2 bg-black text-white px-8 py-2 rounded-xl font-bold brutal-border mt-4 md:mt-0">Subscribe</button>
-            </div>
-          </div>
+        <div className="text-center mb-32">
+          <blockquote className="text-3xl md:text-4xl font-black text-white italic mb-4">
+            "You control your destiny, you don’t need magic to do it."
+          </blockquote>
+          <p className="text-xl text-gray-400 mb-6">你掌握自己的命运，你并不需要魔法来做到这一点。</p>
+          <p className="text-brand-yellow font-bold text-lg">— Merida, Brave</p>
         </div>
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           <div>
