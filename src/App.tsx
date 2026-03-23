@@ -1,4 +1,4 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check } from 'lucide-react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 
@@ -298,7 +298,7 @@ const Portfolio = () => {
 
 const Experience = () => {
   const jobs = [
-    { date: 'Mar 2020 - Dec 2023', title: 'Head of Product Design', color: 'bg-brand-yellow' },
+    { date: 'Jan 2024 – Jan 2025', title: 'Gallery Intern', company: ':iidrr Gallery', description: 'Supported exhibitions, artist coordination, social media content, and visitor engagement in a fast paced contemporary art environment. This role gave me hands-on experience in both gallery operations and the public-facing side of cultural work.', color: 'bg-brand-yellow', icon: <Image size={24} /> },
     { date: 'Sep 2017 - Feb 2020', title: 'Web Designer', color: 'bg-brand-pink' },
     { date: 'Sep 2011 - Feb 2020', title: 'TV Production', color: 'bg-brand-green' }
   ];
@@ -322,11 +322,11 @@ const Experience = () => {
               <div className="flex justify-between items-start mb-6">
                 <span className="font-bold text-gray-500">{job.date}</span>
                 <div className={`w-12 h-12 rounded-full border-2 border-black ${job.color} flex items-center justify-center`}>
-                  <ArrowUpRight size={24} />
+                  {job.icon || <ArrowUpRight size={24} />}
                 </div>
               </div>
               <h3 className="text-3xl font-black mb-4">{job.title}</h3>
-              <p className="text-gray-600">Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.</p>
+              {job.description && <p className="text-gray-600">{job.description}</p>}
             </div>
           ))}
         </div>
