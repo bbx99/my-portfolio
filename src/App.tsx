@@ -96,8 +96,8 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
             )
           ))}
         </div>
-        <button onClick={onContactClick} className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
-          <Mail size={20} />
+        <button onClick={onContactClick} className="w-24 h-12 bg-black rounded-lg flex items-center justify-center text-white brutal-border">
+          <Mail size={24} />
         </button>
       </motion.div>
     </nav>
@@ -376,14 +376,14 @@ const Footer = ({ onResumeClick }) => {
           <motion.div 
             variants={{ hover: { scale: 1.2, rotate: -15, color: '#FFF500' }}}
             transition={{ type: 'spring', stiffness: 300 }}
-            className="absolute -top-10 left-1/2 -translate-x-12 text-gray-700"
+            className="absolute -top-14 left-1/2 -translate-x-12 text-gray-700"
           >
             <Wand2 size={40} />
           </motion.div>
           <motion.div 
             variants={{ hover: { scale: [1, 1.5, 1], opacity: [0, 1, 0], color: '#FFF500' }}}
             transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 0.5 }}
-            className="absolute -top-4 left-1/2 -translate-x-4 opacity-0 text-gray-700"
+            className="absolute -top-8 left-1/2 -translate-x-4 opacity-0 text-gray-700"
           >
             <Sparkles size={24} />
           </motion.div>
