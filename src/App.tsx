@@ -317,7 +317,7 @@ const Experience = ({ onSeeResumeClick }) => {
               My professional experience spans galleries, museums, media, and event settings. Through these roles, I’ve developed skills in audience engagement, digital communication, project coordination, public facing support, and website building across cultural and creative environments.
             </p>
           </div>
-          <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2 text-xl"> <FileText size={24} /> See full resume</button>
+          <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
         </div>
         <div>
           <div className="text-center mb-4">
