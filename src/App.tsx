@@ -66,7 +66,8 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
   const navItems = [
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Strengths', href: '#strengths' },
+    { name: 'Projects', href: '#portfolio' },
     { name: 'Experience', href: '#experience' },
     { name: 'Resume', href: '#resume' },
   ];
@@ -224,7 +225,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
+    <section id="strengths" className="py-20 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
           My <span className="bg-brand-pink text-white px-4 brutal-border">core strengths</span>
@@ -253,7 +254,7 @@ const Services = () => {
 
 const Portfolio = () => {
   return (
-    <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
+    <section id="portfolio" className="py-20 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
           Take a look at my <br />
@@ -359,7 +360,8 @@ const Footer = ({ onResumeClick }) => {
   const navItems = [
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Strengths', href: '#strengths' },
+    { name: 'Projects', href: '#portfolio' },
     { name: 'Experience', href: '#experience' },
     { name: 'Resume', href: '#resume' },
   ];
