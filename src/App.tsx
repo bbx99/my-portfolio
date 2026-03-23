@@ -338,7 +338,15 @@ const Experience = ({ onSeeResumeClick }) => {
   );
 };
 
-const Footer = ({ onContactClick }) => {
+const Footer = ({ onResumeClick }) => {
+  const navItems = [
+    { name: 'Home', href: '#' },
+    { name: 'About', href: '#about' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Resume', href: '#resume' },
+  ];
+
   return (
     <footer className="bg-black text-white pt-32 pb-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -349,33 +357,22 @@ const Footer = ({ onContactClick }) => {
           <p className="text-xl text-gray-400 mb-6">你掌握自己的命运，你并不需要魔法来做到这一点。</p>
           <p className="text-brand-yellow font-bold text-lg">— Merida, Brave</p>
         </div>
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
-          <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-brand-yellow brutal-border flex items-center justify-center text-black font-black">O</div>
-              <span className="text-2xl font-black">Paperfolio X</span>
-            </div>
-            <p className="text-gray-400 mb-8">Lorem ipsum dolor sit amet consecte adipiscing elit. Lectus mattis nunc.</p>
-            <div className="flex gap-4">
-              {[Github, Twitter, Instagram, Youtube, Linkedin].map((Icon, i) => (
-                <div key={i} className="w-10 h-10 rounded-full bg-brand-blue brutal-border flex items-center justify-center hover:bg-brand-pink transition-colors cursor-pointer"><Icon size={18} /></div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="text-xl font-black mb-6">Pages</h4>
-            <ul className="space-y-4 text-gray-400"><li>Home</li><li>About</li><li>Contact</li><li>Portfolio</li><li>Single Project</li></ul>
-          </div>
-          <div>
-            <h4 className="text-xl font-black mb-6">Utility Pages</h4>
-            <ul className="space-y-4 text-gray-400"><li>Style Guide</li><li>Start Here</li><li>404 Not Found</li><li>Password protected</li><li>Licenses</li></ul>
-          </div>
-          <div>
-            <h4 className="text-xl font-black mb-6">Contact us</h4>
-            <ul className="space-y-4 text-gray-400">
-              <li className="flex items-center gap-2"><Mail size={18} /> nikhil@helpinggeeks.com</li>
-              <li className="flex items-center gap-2"><Send size={18} /> +91-9000057810</li>
-            </ul>
+        <div className="flex flex-col items-center justify-center mb-20">
+          <h4 className="text-xl font-black mb-6">Explore</h4>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {navItems.map((item) => (
+              item.name === 'Resume' ? (
+                <button 
+                  key={item.name} 
+                  onClick={onResumeClick} 
+                  className="font-bold text-lg text-gray-400 hover:text-brand-pink transition-colors bg-transparent border-none cursor-pointer p-0"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <a key={item.name} href={item.href} className="font-bold text-lg text-gray-400 hover:text-brand-pink transition-colors">{item.name}</a>
+              )
+            ))}
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500"><p>© 2026 Paperfolio X. All rights reserved.</p></div>
@@ -474,7 +471,7 @@ export default function App() {
       <Services />
       <Portfolio />
       <Experience onSeeResumeClick={openResumeModal} />
-      <Footer onContactClick={openModal} />
+      <Footer onResumeClick={openResumeModal} />
 
       <AnimatePresence>
         {isModalOpen && <ContactModal email={email} onClose={closeModal} />}
