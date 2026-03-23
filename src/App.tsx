@@ -318,7 +318,7 @@ const Experience = ({ onSeeResumeClick }) => {
           </p>
           <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
         </div>
-        <div className="space-y-8">
+        <div className="space-y-8 max-h-[38rem] overflow-y-auto pr-4">
           {jobs.map((job, i) => (
             <div key={i} className="brutal-card p-6"> {/* Adjusted padding from p-8 to p-6 */}
               <div className="flex justify-between items-start mb-4"> {/* Reduced margin-bottom */}
