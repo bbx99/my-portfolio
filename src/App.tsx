@@ -312,7 +312,7 @@ const Experience = () => {
             <span className="bg-brand-purple text-white px-4 brutal-border">arts, media & events</span>
           </h2>
           <p className="text-xl text-gray-400 mb-10">
-            My professional experience spans galleries, museums, media, and event settings. Through these roles, I’ve developed skills in audience engagement, digital communication, project coordination, and public facing support across cultural and creative environments.
+            My professional experience spans galleries, museums, media, and event settings. Through these roles, I’ve developed skills in audience engagement, digital communication, project coordination, public facing support, and website building across cultural and creative environments.
           </p>
           <button className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
         </div>
