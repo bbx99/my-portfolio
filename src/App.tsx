@@ -26,9 +26,10 @@ const FloatingShapes = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-pink/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-blue/5 rounded-full blur-3xl"></div>
-      <div className="absolute top-[40%] right-[-5%] w-[30%] h-[30%] bg-brand-yellow/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-[-15%] left-[-15%] w-[50%] h-[50%] bg-pink-400/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-[-15%] right-[-15%] w-[50%] h-[50%] bg-blue-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-[30%] right-[10%] w-[40%] h-[40%] bg-yellow-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute bottom-[10%] left-[5%] w-[40%] h-[40%] bg-purple-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '6s' }}></div>
       {shapes.map((s, i) => (
         <motion.div
           key={i}
@@ -78,9 +79,7 @@ const Navbar = ({ onContactClick, onResumeClick }) => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="nav-pill justify-between p-2"
       >
-        <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
-          <img src="/food.png" alt="Dim Sum Icon" className="w-full h-full object-cover" />
-        </div>
+        <img src="/food.png" alt="Dim Sum Icon" className="w-16 h-16 object-contain" />
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             item.name === 'Resume' ? (
