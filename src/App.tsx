@@ -318,19 +318,27 @@ const Experience = ({ onSeeResumeClick }) => {
           </p>
           <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
         </div>
-        <div className="space-y-8 max-h-[38rem] overflow-y-auto pr-4">
+        <div className="space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-neutral-900 rounded-2xl">
           {jobs.map((job, i) => (
-            <div key={i} className="brutal-card p-6"> {/* Adjusted padding from p-8 to p-6 */}
-              <div className="flex justify-between items-start mb-4"> {/* Reduced margin-bottom */}
-                <span className="font-bold text-gray-500">{job.date}</span>
-                <div className={`w-12 h-12 rounded-full border-2 border-black ${job.color} flex items-center justify-center`}>
-                  {job.icon || <ArrowUpRight size={24} />}
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <div className="brutal-card p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <span className="font-bold text-gray-500">{job.date}</span>
+                  <div className={`w-12 h-12 rounded-full border-2 border-black ${job.color} flex items-center justify-center`}>
+                    {job.icon || <ArrowUpRight size={24} />}
+                  </div>
                 </div>
+                <h3 className="text-2xl font-black mb-1">{job.title}</h3>
+                {job.company && <h4 className="text-lg font-bold text-gray-500 mb-3">{job.company}</h4>}
+                <p className="text-gray-600">{job.description}</p>
               </div>
-              <h3 className="text-2xl font-black mb-1">{job.title}</h3> {/* Slightly smaller title */}
-              {job.company && <h4 className="text-lg font-bold text-gray-500 mb-3">{job.company}</h4>} {/* Adjusted text size and margin */}
-              <p className="text-gray-600">{job.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
