@@ -1,4 +1,4 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download } from 'lucide-react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -306,18 +306,33 @@ const Experience = ({ onSeeResumeClick }) => {
 
   return (
     <section id="experience" className="bg-black py-32 px-4">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-        <div>
-          <h2 className="text-6xl md:text-7xl font-black text-white mb-8 leading-tight">
-            My work in <br />
-            <span className="bg-brand-purple text-white px-4 brutal-border">arts, media & events</span>
-          </h2>
-          <p className="text-xl text-gray-400 mb-10">
-            My professional experience spans galleries, museums, media, and event settings. Through these roles, I’ve developed skills in audience engagement, digital communication, project coordination, public facing support, and website building across cultural and creative environments.
-          </p>
-          <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2"> <FileText size={20} /> See full resume</button>
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-end">
+        <div className="flex flex-col h-full justify-between">
+          <div>
+            <h2 className="text-7xl md:text-8xl font-black text-white mb-8 leading-tight">
+              My work in <br />
+              <span className="bg-brand-purple text-white px-4 brutal-border">arts, media & events</span>
+            </h2>
+            <p className="text-2xl text-gray-400 mb-10">
+              My professional experience spans galleries, museums, media, and event settings. Through these roles, I’ve developed skills in audience engagement, digital communication, project coordination, public facing support, and website building across cultural and creative environments.
+            </p>
+          </div>
+          <button onClick={onSeeResumeClick} className="brutal-btn-white flex items-center gap-2 py-4 px-6 text-xl"> <FileText size={24} /> See full resume</button>
         </div>
-        <div className="space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-yellow-200 rounded-2xl">
+        <div className="relative space-y-4 max-h-[38rem] overflow-y-auto p-4 bg-yellow-200 rounded-2xl">
+          <motion.div 
+            initial={{ opacity: 1, y: 0}} 
+            whileInView={{ opacity: 0, y: -20 }}
+            viewport={{ amount: 0.2, once: true }}
+            transition={{ duration: 0.5 }}
+            className="sticky top-4 z-10 text-center"
+          >
+            <div className="inline-flex items-center gap-2 bg-black/10 text-black font-bold px-4 py-2 rounded-full">
+              <Mouse size={20} />
+              <span>Scroll for more</span>
+            </div>
+          </motion.div>
+
           {jobs.map((job, i) => (
             <motion.div
               key={i}
