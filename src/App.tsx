@@ -1,4 +1,4 @@
-import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse } from 'lucide-react';
+import { Mail, Briefcase, User, Layout, FileText, Send, Github, Twitter, Instagram, Youtube, Linkedin, ArrowUpRight, Star, Circle, Square, Triangle, Sparkles, Pizza, Coffee, IceCream, Cat, Dog, Bird, Rabbit, Fish, Snail, Cookie, X, Copy, Check, Image, Download, Mouse, Palette } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
@@ -207,7 +207,7 @@ const Services = () => {
       title: 'Arts Administration',
       desc: 'My experience in galleries, museums, and cultural environments has given me a strong foundation in exhibition support, cultural programming, gallery operations, and audience facing work. I’m especially interested in helping creative organizations run in a way that feels thoughtful, organized, and welcoming to the public.',
       color: 'bg-gray-100',
-      icon: <Briefcase className="text-brand-blue" size={48} />
+      icon: <Palette className="text-brand-blue" size={48} />
     },
     {
       title: 'Marketing & Comms',
