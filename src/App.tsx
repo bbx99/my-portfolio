@@ -382,7 +382,7 @@ const Footer = ({ onResumeClick }) => {
           <motion.div 
             variants={{ hover: { scale: 1.2, rotate: -15, color: '#FFF500' }}}
             transition={{ type: 'spring', stiffness: 300 }}
-            className="absolute -top-8 left-1/2 -translate-x-12 text-gray-700"
+            className="absolute -top-10 left-1/2 -translate-x-12 text-gray-700"
           >
             <Wand2 size={40} />
           </motion.div>
