@@ -282,24 +282,16 @@ const Portfolio = () => {
           <a href="https://anamcarajade.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-black text-lg hover:gap-4 transition-all">View case study <ArrowUpRight size={24} /></a>
         </div>
         
-        {/* Right Illustration */}
-        <div className="flex-1 bg-brand-purple flex items-center justify-center p-8 md:p-16 border-t-2 md:border-t-0 md:border-l-2 border-black">
-          <div className="w-full max-w-md bg-white brutal-border rounded-xl p-4 brutal-shadow-lg">
-            <div className="flex gap-2 mb-4">
-              <div className="w-3 h-3 rounded-full bg-brand-pink brutal-border"></div>
-              <div className="w-3 h-3 rounded-full bg-brand-yellow brutal-border"></div>
-              <div className="w-3 h-3 rounded-full bg-brand-blue brutal-border"></div>
-            </div>
-            <div className="aspect-video bg-brand-purple brutal-border rounded-lg flex items-center justify-center text-white mb-4">
-              <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="h-2 w-3/4 bg-gray-200 rounded"></div>
-              <div className="h-2 w-1/2 bg-gray-200 rounded"></div>
-            </div>
-          </div>
+        {/* Right Video */}
+        <div className="flex-1 border-t-2 md:border-t-0 md:border-l-2 border-black overflow-hidden">
+          <video 
+            src="/brand-video.MP4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
         </div>
       </motion.div>
     </section>
