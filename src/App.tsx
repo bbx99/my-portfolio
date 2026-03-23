@@ -300,7 +300,7 @@ const Experience = () => {
   const jobs = [
     { date: 'Jan 2024 – Jan 2025', title: 'Gallery Intern', company: ':iidrr Gallery', description: 'Supported exhibitions, artist coordination, social media content, and visitor engagement in a fast paced contemporary art environment. This role gave me hands-on experience in both gallery operations and the public-facing side of cultural work.', color: 'bg-brand-yellow', icon: <Image size={24} /> },
     { date: 'Jul 2022 – Feb 2023', title: 'Marketing Media Operations Coordinator', company: 'TVB (USA) Inc.', description: 'Supported digital media operations through content coordination, SEO, branding, and partnership work. This experience deepened my understanding of audience growth, platform communication, and how creative content connects with the market.', color: 'bg-brand-pink', icon: <Youtube size={24} /> },
-    { date: 'Mar 2023 – Jun 2023', title: 'Account Executive Intern', company: 'Publicis Groupe – Leo Burnett', description: 'Worked across client communication, project coordination, timelines, and campaign support in an agency setting. It strengthened my ability to stay organized, communicate clearly, and adapt quickly in a collaborative environment.', color: 'bg-brand-green', icon: <Briefcase size={24} /> }
+    { date: 'Mar 2023 – Jun 2023', title: 'Account Executive Intern', company: 'Publicis Groupe – Leo Burnett', description: 'Worked across client communication, project coordination, timelines, and campaign support in an agency setting. It strengthened my ability to stay organized, communicate clearly, and adapt quickly in a collaborative environment.', color: 'bg-green-500', icon: <Briefcase size={24} /> }
   ];
 
   return (
