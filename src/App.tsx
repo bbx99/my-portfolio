@@ -325,8 +325,9 @@ const Experience = () => {
                   {job.icon || <ArrowUpRight size={24} />}
                 </div>
               </div>
-              <h3 className="text-3xl font-black mb-4">{job.title}</h3>
-              {job.description && <p className="text-gray-600">{job.description}</p>}
+              <h3 className="text-3xl font-black mb-1">{job.title}</h3>
+              {job.company && <h4 className="text-xl font-bold text-gray-500 mb-4">{job.company}</h4>}
+              <p className="text-gray-600">{job.description || 'Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.'}</p>
             </div>
           ))}
         </div>
