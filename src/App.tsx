@@ -258,7 +258,7 @@ const Portfolio = () => {
       <div className="text-center mb-16">
         <h2 className="text-5xl md:text-6xl font-black mb-6">
           Take a look at my <br />
-          <span className="bg-brand-yellow text-black px-4 brutal-border">design portfolio</span>
+          <span className="bg-brand-yellow text-black px-4 brutal-border">brand project</span>
         </h2>
       </div>
       
